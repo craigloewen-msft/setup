@@ -3,23 +3,6 @@
 properties:
   configurationVersion: 0.2.0
   resources:
- 
-# Creates a new Dev Drive volume with Drive letter 'Z' and label 'Dev Drive 1' onto disk 0
-    - resource: Disk
-      id: DevDrive1
-      directives:
-        module: StorageDsc
-        description: 'Format a new Dev Drive volume onto Disk 0'
-        allowPrerelease: true
-      settings:
-        DiskId: '0'
-        DiskIdType: 'Number'
-        DriveLetter: 'Z'
-        FSLabel: 'Dev Drive'
-        DevDrive: true
-        AllowDestructive: true
-        FSFormat: 'ReFS'
-        Size: '75Gb'
 
 # Windows settings
     - resource: Microsoft.Windows.Developer/WindowsExplorer
@@ -38,7 +21,7 @@ properties:
         TaskViewButton: Hide
         WidgetsButton: Hide
 
-# Getting Git stuff
+# Getting apps
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: git.git
       directives:
@@ -48,15 +31,6 @@ properties:
         id: git.git
         source: winget
 
-    # will use the DSC here to get Visual Studio and other items.
-    - resource: GitDsc/GitClone
-      directives:
-        description: Clone the winget-cli repository
-        allowPrerelease: true
-      settings:
-        HttpsUrl: https://github.com/microsoft/powertoys.git
-        RootDirectory: 'Z:/Source/' # will clone into /PowerToys root
-
     - resource: Microsoft.WinGet.DSC/WinGetPackage
       id: Microsoft.VisualStudioCode
       directives:
@@ -64,15 +38,6 @@ properties:
         allowPrerelease: true
       settings:
         id: Microsoft.VisualStudioCode
-        source: winget
-
-    - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Microsoft.PowerShell
-      directives:
-        description: Install Microsoft.PowerShell 7
-        allowPrerelease: true
-      settings:
-        id: Microsoft.PowerShell
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
@@ -85,19 +50,19 @@ properties:
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: AgileBits.1Password
+      id: Docker.DockerDesktop
       directives:
-        description: Install AgileBits.1Password
+        description: Install Docker.DockerDesktop
         allowPrerelease: true
       settings:
-        id: AgileBits.1Password
+        id: Docker.DockerDesktop
         source: winget
 
     - resource: Microsoft.WinGet.DSC/WinGetPackage
-      id: Logitech.OptionsPlus
+      id: Obsidian.Obsidian
       directives:
-        description: Install Logitech.OptionsPlus
+        description: Install Obsidian.Obsidian
         allowPrerelease: true
       settings:
-        id: Logitech.OptionsPlus
+        id: Obsidian.Obsidian
         source: winget
