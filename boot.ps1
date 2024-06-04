@@ -52,7 +52,7 @@ else {
 
 $isAdmin = ([Security.Principal.WindowsPrincipal][Security.Principal.WindowsIdentity]::GetCurrent()).IsInRole([Security.Principal.WindowsBuiltInRole]::Administrator)
 
-$dscUri = "https://raw.githubusercontent.com/crloewen/setup/main/"
+$dscUri = "https://raw.githubusercontent.com/craigloewen-msft/setup/main/"
 $dscNonAdmin = "crloewen.nonAdmin.dsc.yml";
 $dscDev = "crloewen.dev.dsc.yml";
 $dscOffice = "crloewen.office.dsc.yml";
