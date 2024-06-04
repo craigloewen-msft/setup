@@ -2,6 +2,14 @@
 
 This was brazenly forked from Clint Rutkas's original project. See his readme below.
 
+## Future improvements
+
+- Set dark mode
+- Hide chat on taskbar
+- Alt tab behaviour don't show tabs
+- Install VS Code extensions
+- Apply wallpaper
+
 # crutkas WinGet Configure list
 
 This is my winget configure script to set up a new computer.  Still work in progress.  There will need to be a hybrid of Needing admin to run.  Parts have been validated on an Azure VM but needs more validation.
