@@ -27,6 +27,7 @@ properties:
       directives:
         description: Install git.git
         allowPrerelease: true
+        securityContext: elevated
       settings:
         id: git.git
         source: winget
@@ -54,6 +55,7 @@ properties:
       directives:
         description: Install Docker.DockerDesktop
         allowPrerelease: true
+        securityContext: elevated
       settings:
         id: Docker.DockerDesktop
         source: winget
