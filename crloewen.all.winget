@@ -95,3 +95,15 @@ properties:
       settings:
         id: Microsoft.Teams
         source: winget
+
+    - resource: PSDscResources/Script
+      directives:
+        description: Setup GlazeWM configuration
+        allowPrerelease: true
+      settings:
+        GetScript: |
+          return @{ Result = (Test-Path "$env:USERPROFILE\.glzr\glazewm\config.yaml") }
+        TestScript: |
+          Test-Path "$env:USERPROFILE\.glzr\glazewm\config.yaml"
+        SetScript: |
+          & "$PSScriptRoot\scripts\setup-glazewm-config.ps1"
