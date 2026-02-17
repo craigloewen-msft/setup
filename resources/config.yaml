@@ -225,6 +225,11 @@ keybindings:
   - commands: ['toggle-tiling-direction']
     bindings: ['lwin+ctrl+v']
 
+  # Toggle vertical layout with neighbor window. Groups the focused window
+  # vertically with its left neighbor (or right if no left neighbor exists).
+  - commands: ['toggle-vertical']
+    bindings: ['lwin+j']
+
   # Change focus from tiling windows -> floating -> fullscreen.
   - commands: ['wm-cycle-focus']
     bindings: ['alt+space']
@@ -269,6 +274,12 @@ keybindings:
 
   - commands: ['shell-exec C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe']
     bindings: ['lwin+shift+b']
+
+  - commands: ['shell-exec C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe --new-window https://sdf.outlook.cloud.microsoft/mail/']
+    bindings: ['lwin+shift+u']
+
+  - commands: ['shell-exec C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe --new-window https://sdf.outlook.cloud.microsoft/calendar/view/week']
+    bindings: ['lwin+shift+j']
 
   - commands: ['shell-exec C:\\Users\\crloewen\\AppData\\Local\\Programs\\obsidian\\Obsidian.exe']
     bindings: ['lwin+shift+o']
