@@ -218,7 +218,7 @@ keybindings:
   # Disables window management and all other keybindings until alt+shift+p
   # is pressed again.
   - commands: ['wm-toggle-pause']
-    bindings: ['alt+shift+p']
+    bindings: ['lwin+shift+p']
 
   # Change tiling direction. This determines where new tiling windows will
   # be inserted.
