@@ -181,13 +181,13 @@ binding_modes:
 keybindings:
   # Shift focus in a given direction.
   - commands: ['focus --direction left']
-    bindings: ['lwin+h', 'lwin+left']
+    bindings: ['lwin+left', 'lwin+left']
   - commands: ['focus --direction right']
-    bindings: ['lwin+l', 'lwin+right']
+    bindings: ['lwin+right', 'lwin+right']
   - commands: ['focus --direction up']
-    bindings: ['lwin+k', 'lwin+up']
+    bindings: ['lwin+up', 'lwin+up']
   - commands: ['focus --direction down']
-    bindings: ['lwin+j', 'lwin+down']
+    bindings: ['lwin+down', 'lwin+down']
 
   # Move focused window in a given direction.
   - commands: ['move --direction left']
@@ -195,9 +195,9 @@ keybindings:
   - commands: ['move --direction right']
     bindings: ['lwin+shift+l', 'lwin+shift+right']
   - commands: ['move --direction up']
-    bindings: ['lwin+shift+k', 'lwin+shift+up']
+    bindings: ['lwin+shift+up']
   - commands: ['move --direction down']
-    bindings: ['lwin+shift+j', 'lwin+shift+down']
+    bindings: ['lwin+shift+down']
 
   # Resize focused window by a percentage or pixel amount.
   - commands: ['resize --width -2%']
@@ -260,7 +260,7 @@ keybindings:
 
   # Re-evaluate configuration file.
   - commands: ['wm-reload-config']
-    bindings: ['alt+shift+r']
+    bindings: ['lwin']
 
   # Redraw all windows.
   - commands: ['wm-redraw']
@@ -280,6 +280,9 @@ keybindings:
 
   - commands: ['shell-exec C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe --new-window https://sdf.outlook.cloud.microsoft/calendar/view/week']
     bindings: ['lwin+shift+j']
+
+  - commands: ['shell-exec C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe --new-window https://autotaskcalendar.azurewebsites.net/#/calendar']
+    bindings: ['lwin+shift+k']
 
   - commands: ['shell-exec C:\\Users\\crloewen\\AppData\\Local\\Programs\\obsidian\\Obsidian.exe']
     bindings: ['lwin+shift+o']
